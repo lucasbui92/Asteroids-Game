@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+            @import url(style.css);
+            p.highlight {
+                color: red;
+            }
+            svg {
+            position: absolute;
+            height: calc(100vh - 120px);
+            width: 800px;
+            background-color: rgb(41, 41, 36);
+        }
+        </style>
+        <script src="svgelement.js"></script>
+        <script src="observable.js"></script>
+        <script src="asteroids.js"></script>
+    </head>
+    <body>
+        <div id="info">
+            <h1>Asteroids</h1>
+        </div>
+    
+        <svg id="canvas" width="600" height="600">
+            <g>
+                <text font-size="12" x="620" y="20" fill="white">Use [&larr;] [&uarr;] [&darr;] [&rarr;] to MOVE</text>
+                <text font-size="12" x="620" y="40" fill="white">Use [Ctrl] to ROTATE</text>
+                <text font-size="12" x="620" y="60" fill="white">Use [SPACE] to SHOOT</text>
+                <text font-size="12" x="620" y="80" fill="white">Use [ENTER] to START GAME</text>
+                <text id="txtgameOver" font-size="13" x="350" y="200" fill="white"></text>
+                <rect x="2" y="2" width="150" height="50" fill="#95B3D7"></rect>
+                <text id="txtscore" x="10" y="20" font-family="Verdana" font-size="13" fill="blue">SCORE: </text>
+                <text id="txtlives" x="10" y="45" font-family="Verdana" font-size="13" fill="blue">LIVES: </text>
+            </g>
+        </svg>
+    </body>
+</html>
